@@ -1,0 +1,1016 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 400,500,700');
+
+/*limited reset*/
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, 
+blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align:baseline;
+}
+
+/*html5 display rule*/
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, 
+section, summary {
+	display: block;
+}  
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins',Helvetica, sans-serif;
+    color: #222;
+    scroll-behavior: smooth;
+}
+
+.cf:before,
+.cf:after{
+    content: "";
+    display: table;
+}
+
+.cf:after{
+    clear: both;
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                CUSTOM PROPERTIES 
+---------------------------------------------------------------------------------------------------------*/
+:root{
+    --fw-reg: 300;
+    --fw-med: 500;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #000;
+    --clr-ldark: #272727;
+    --clr-lgray: #d6cdcd;
+    --clr-gray: #737373;
+
+    --fs-h1: 5em;
+    --fs-h2: 2em;
+    --fs-h3: 1.5em;
+    --fs-p: 1.1em;
+    --fs-psmall: 1em;
+    --fs-a: 1.3em;
+    --fs-logo: 1.2em;
+
+    --p-headpad: 3.6em;
+    --p-onepara: 15em;
+    --p-fixedpad: 2.8em;
+    --p-padding: 1em;
+    --p-footpad: 5em;
+    --p-content: 4.5em;
+}
+
+@media (min-width: 640px) and (max-width: 1000px){
+    :root{
+        --fs-h1: 4em;
+        --fs-h2: 1.8em;
+        --fs-h3: 1.3em;
+        --fs-p: 1em;
+        --fs-psmall: 0.9em;
+        --fs-a: 1em;
+        --fs-logo: 1.1em;
+
+        --p-headpad: 4em;
+        --p-onepara: 10em;
+        --p-fixedpad: 3.5em;
+        --p-padding: 0.8em;
+        --p-footpad: 3.5em;
+        --p-content: 4em;
+    }
+    
+    .navbar li {
+        margin-right: 1.3em;
+    }
+
+    section .threeParagraphs{
+        justify-content: flex-start;
+    }
+    
+    .threeParagraphs .paraOne, .threeParagraphs .paraTwo, .threeParagraphs .paraThree{
+        flex: 1 0 500px;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 639px){
+    :root{
+        --fs-h1: 3em;
+        --fs-h2: 1.6em;
+        --fs-h3: 1.1em;
+        --fs-p: 0.9em;
+        --fs-psmall: 0.8em;
+        --fs-a: 0.8em;
+        --fs-logo: 1em;
+        
+        --p-headpad: 4.3em;
+        --p-onepara: 5em;
+        --p-fixedpad: 4.8em;
+        --p-padding: 0.6em;
+        --p-footpad: 2.5em;
+        --p-content: 3.5em;
+    }
+
+    .reservationBackground .headerImage h1{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navWrap .logo{
+        padding-left: 2.5em;
+    }
+
+    nav .hamburger-menu{
+        display: block;
+        position: fixed;
+        top: 5%;
+        right: 5%;
+        font-size: var(--fs-h3);
+        z-index: 2;
+    }
+
+    .navbar{
+        width: 40%;
+        height: 80%;
+        background-color: #262626;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding-right: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30% 0 0 70%;
+        transition: all 0.5s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .change{
+        opacity: 0.9;
+        visibility: visible;
+    }
+
+    .navbar .nav-item{
+        margin: 1em 1em 2em 3em;
+    }
+
+    section .threeParagraphs{
+        justify-content: flex-start;
+    }
+    
+    .threeParagraphs .paraOne, .threeParagraphs .paraTwo, .threeParagraphs .paraThree{
+        flex: 1 0 300px;
+    }
+   
+}
+
+@media (max-width: 389px){
+    :root{
+        --fs-h1: 2em;
+        --fs-h2: 1.4em;
+        --fs-h3: 0.9em;
+        --fs-p: 0.8em;
+        --fs-psmall: 0.7em;
+        --fs-a: 0.6em;
+        --fs-logo: 0.9em;
+
+        --p-headpad: 4.8em;
+        --p-onepara: 2.5em;
+        --p-fixedpad: 5.6em;   
+        --p-padding: 0.4em;
+        --p-footpad: 1.8em;
+        --p-content: 3em;
+    }
+
+    .reservationBackground .headerImage h1{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navWrap .logo{
+        padding-left: 2.5em;
+    }
+    
+    nav .hamburger-menu{
+        display: block;
+        position: fixed;
+        top: 5%;
+        right: 5%;
+        font-size: var(--fs-h3);
+        z-index: 2;
+    }
+
+    .navbar{
+        width: 40%;
+        height: 80%;
+        background-color: #262626;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30% 0 0 70%;
+        transition: all 0.5s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .change{
+        opacity: 0.9;
+        visibility: visible;
+    }
+
+    .navbar .nav-item{
+        margin: 1em 0 2em 1.5em;
+    }
+
+    section .threeParagraphs{
+        justify-content: flex-start;
+    }
+    
+    .threeParagraphs .paraOne, .threeParagraphs .paraTwo, .threeParagraphs .paraThree{
+        flex: 1 0 200px;
+    }
+
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                LOGO 
+---------------------------------------------------------------------------------------------------------*/
+
+header .logo{
+    float: left;
+    padding-top: 3em;
+    padding-left: 5em;
+    margin-bottom: 1em;
+}
+
+.logo a{
+    color: #fff;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-p);
+    text-decoration: none;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.logo a:hover{
+    color: var(--clr-lgray);
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                NAVBAR 
+---------------------------------------------------------------------------------------------------------*/
+
+.hamburger-menu{
+    display: none;
+}
+
+nav{
+    float: right;
+    margin-bottom: 1.5em;
+    padding-top: 3.4em;
+    padding-right: 4%;   
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav li {
+	float: left;
+	margin-right: 1.6em;
+}
+
+nav a {
+	text-transform: capitalize;
+    text-decoration: none;
+	display: block;
+	color: #fff;
+	border: none;
+	font-size: 0.8em;
+    font-weight: var(--fw-bold);
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #000;
+}
+
+nav a:hover {
+	color: var(--clr-lgray);
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                HEADER IMAGE 
+---------------------------------------------------------------------------------------------------------*/
+.mainBackground{
+    background: url(../img/background_header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.headerImage{
+    text-align: center;
+}
+
+.headerImage h1{
+    color: #fff;
+    padding: var(--p-headpad) 0.9em 0;
+    letter-spacing: .015em;
+    line-height: 1em;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h1);
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.headerImage h3{
+    color: #fff;
+    padding: 2em 4em;
+    word-spacing: 0.1em;
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-h3);
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 2px #000;
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                DESTINATION ONE PARAGRAPH 
+---------------------------------------------------------------------------------------------------------*/
+.destination{
+    margin-bottom: 8em;
+}
+
+.destination h3{
+    color: #000;
+    padding: 5em 0 2em;
+    text-align: center;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+    letter-spacing: .015em;
+    text-transform: uppercase;
+}
+
+.destination p{
+    color: #000;
+    padding: 1em var(--p-onepara) 1em;
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-p);
+    text-align: center;
+    line-height: 2em;
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                EAT FIXED BACKGROUND IMAGE 
+---------------------------------------------------------------------------------------------------------*/
+
+.fixed_eat{
+    background-image: url(../img/background_eat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.fixed_eat h1{
+    color: #fff;
+    padding-top: var(--p-fixedpad);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h1);
+    letter-spacing: .015em;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.fixed_eat p{
+    color: #fff;
+    padding: 2em var(--p-onepara) 1em;
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-p);
+    text-align: center;
+    line-height: 1.7em;
+    letter-spacing: .04em;
+    word-spacing: 0.15em;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.fixed_eat .reserve{
+    padding: 2.5em 5em;
+    height: 3em;
+    text-align: center;
+}
+.fixed_eat a{
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    word-spacing: 0.15em;
+    font-weight: var(--fw-med);
+    font-size: var(--fs-a);
+    padding: 0.4em 1.5em;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.fixed_eat a:hover{
+    background: #fff;
+    color: #000;
+    text-shadow: none;
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                THREE IMAGES 
+---------------------------------------------------------------------------------------------------------*/
+
+.threeImages{
+    padding: 7em 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto)); 
+    grid-gap: 0.7em;
+}
+
+.threeImages img{
+    width: 100%;
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                TWO PARAGRAPHS
+---------------------------------------------------------------------------------------------------------*/
+
+.twoParagraphs{
+    display: flex;
+    padding: 0 2.8em;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.twoParagraphs .paraOne{
+    margin-right: 2em;
+}
+
+.twoParagraphs .paraOne,.twoParagraphs .paraTwo{
+    flex: 1 0 221px;
+}
+
+.twoParagraphs p{
+    padding: 1em 0;
+    line-height: 1.7;
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-p);
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                MENU
+---------------------------------------------------------------------------------------------------------*/
+
+.menuButton{
+    padding: 4em;
+    height: 3em;
+    text-align: center;
+}
+
+.menuButton a{
+    color: #272727;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    word-spacing: 0.15em;
+    font-weight: var(--fw-med);
+    font-size: var(--fs-a);
+    padding: 0.9em 1.8em;
+    border: 2px solid #272727;
+    border-radius: 30px;
+}
+
+.menuButton a:hover{
+    color: #fff;
+    background: #272727;
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                KITCHEN FIXED IMAGE
+---------------------------------------------------------------------------------------------------------*/
+
+.fixed_kitchen{
+    background-image: url(../img/background_kitchen.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.fixed_kitchen h1{
+    color: #fff;
+    padding-top: var(--p-fixedpad);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h1);
+    letter-spacing: .015em;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.fixed_kitchen p{
+    color: #fff;
+    padding: 2em var(--p-onepara) 1em;
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-p);
+    text-align: center;
+    line-height: 1.7em;
+    letter-spacing: .04em;
+    word-spacing: 0.15em;
+    text-shadow: 2px 2px 2px #000;
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                THREE PARAGRAPHS
+---------------------------------------------------------------------------------------------------------*/
+
+.threeParagraphs{
+    padding: 8em 4em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+.paraOne, .paraTwo, .paraThree{
+    flex: 1 0 200px;
+    margin: 0 var(--p-padding) 2em;
+}
+
+.threeParagraphs h2{
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+    margin-bottom: 0.7em;
+}
+
+.threeParagraphs h3{
+    text-transform: uppercase;
+}
+
+.threeParagraphs h3, .threeParagraphs p{   
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-p);
+    color: var(--clr-gray);
+    margin-bottom: 0.8em;
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                TWO IMAGES 
+---------------------------------------------------------------------------------------------------------*/
+
+.twoImages{
+    padding: 7em 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto)); 
+    grid-gap: 0.7em;
+}
+
+.twoImages img{
+    width: 100%;
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                                FOOTER 
+---------------------------------------------------------------------------------------------------------*/
+
+footer{
+    background: #3c342f;
+    height: 70vh;
+    color: #ccc;
+    padding: 0 var(--p-footpad);
+    position: relative;
+}
+
+footer p{
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-p);
+}
+
+footer .social{
+    padding: 2em 0;
+    font-size: var(--fs-h3);
+}
+
+footer .social a{
+    color: #fff;
+    padding: 0.2em 0.4em;
+}
+
+footer .social a:hover{
+    color: rgb(138, 133, 133);
+}
+ 
+footer p{
+    font-size: var(--fs-p);
+}
+
+footer .location_heading{
+    float: left;
+    width: 70%;
+}
+
+footer .hour_heading{
+    float: right;
+    width: 30%;
+}
+
+footer .location, footer .hour{
+    padding-bottom: var(--p-padding);
+}
+
+.locationOne, .locationTwo, .schedule{
+    padding-top: var(--p-padding);
+}
+
+footer .locationOne, footer .locationTwo{
+    float: left;
+    padding-right: 3em;
+}
+
+footer .copyright{
+    clear: both;
+    position: absolute;
+    padding: var(--p-padding); 
+    top: 80%;
+    right: 25%;
+    left: 25%;
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                        PAGE 2 : MENU 
+---------------------------------------------------------------------------------------------------------*/
+
+.menuBackground{
+    background: url(../img/background_menu.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.appetizers, .entrees, .dessert{
+    text-align: center;
+}
+
+.dessert{
+    margin-bottom: 6em;
+}
+
+.appetizers h2,.entrees h2, .dessert h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    padding-top: var(--p-fixedpad);
+    padding-bottom: 3em;
+}
+
+.appMenu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.appMenu .content{
+    flex: 1 0 300px;
+    padding: var(--p-padding);
+    text-align: left;
+    margin: 1em 3em var(--p-content);
+    color: var(--clr-gray);
+    position: relative;
+}
+
+.appMenu .head{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-p);
+    margin-bottom: 0.3em;
+}
+
+.appMenu .addon{
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-p);
+}
+
+.appMenu .price{
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-p);
+}
+
+.appMenu .content div:first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-right: 5em;
+}
+
+.appMenu .content div:last-child{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                        PAGE 3 : RESERVATION 
+---------------------------------------------------------------------------------------------------------*/
+
+.reservationBackground{
+    background: url(../img/background_reservation.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.reservation, .rooms{
+    text-align: center;
+    padding: 3em;
+    margin-bottom: 3.5em;
+}
+
+.reservation h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    padding-top: var(--p-fixedpad);
+    padding-bottom: 2em;
+}
+
+.reservation a{
+    background: var(--clr-ldark);
+    color: #fff;
+    padding: 0.7em 2em;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-psmall);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.reservation a:hover{
+    background: var(--clr-gray);
+    color: var(--clr-dark);
+}
+
+.events{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 4em 4em;
+}
+
+.phone, .special, .bigRoom, .smallRoom{
+    flex: 1 0 200px;
+    padding: 2em var(--p-padding);
+    text-align: left;
+    color: var(--clr-gray);
+}
+
+.events h3, .rooms h3{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-p);
+    color: var(--clr-dark);
+    margin-bottom: 0.3em;
+    text-transform: uppercase;
+}
+
+.events p, .rooms p{
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-p);
+}
+
+.reserveImage{
+    padding: 0 var(--p-content) 2.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto)); 
+}
+
+.reserveImage img{
+    width: 100%;
+}
+
+.rooms{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 1em 4em;
+}
+
+.bigRoom p:first-of-type, .smallRoom p:first-of-type{
+    font-weight: var(--fw-bold);
+    padding: 1.1em 0;
+}
+.bigRoom p:last-of-type, .smallRoom p:last-of-type{
+    padding-top: 1em;
+}
+
+.call{
+    text-align: center;
+    padding: 0 1em 7em;
+}
+
+.call h3{
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-h3);
+    padding: 0 var(--p-content);
+}
+
+.call strong{
+    color: var(--clr-dark);
+    font-weight: var(--fw-bold);
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                        PAGE 4 : LOCATION 
+---------------------------------------------------------------------------------------------------------*/
+
+.locationBackground{
+    background: url(../img/background_location.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.address{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 6em 4em 2em;
+}
+
+.addressOne, .addressTwo, .addressThree{
+    flex: 1 0 200px;
+    padding: 1em var(--p-padding);
+    text-align: left;
+    color: var(--clr-gray);
+}
+
+.address h3{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-p);
+    color: var(--clr-dark);
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+.address p, .inqueries p{
+    line-height: 2.2em;
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-p);
+}
+
+.inqueries{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3em 2em 1em;
+}
+
+.queries{
+    flex: 1 0 25%;
+    padding: 5em var(--p-padding) 1em;
+    text-align: left;
+    color: var(--clr-gray);
+    margin-left: 1.8em;
+    margin-right: 1em;
+}
+
+.queries h3{
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark);
+    margin-bottom: 0.1em;
+}
+
+.queries div{
+    margin-bottom: 3em;
+}
+
+.my-form{
+    flex: 1 0 55%;
+    padding: 1em var(--p-padding);
+    text-align: left;
+    color: var(--clr-gray);
+}
+
+.my-form .form-group{
+    padding-bottom: 2em;
+}
+
+.my-form label{
+    display: block;
+    color: var(--clr-gray);
+    font-weight: var(--fw-med);
+    font-size: var(--fs-psmall);
+}
+
+.my-form input[type="text"],.my-form input[type="email"], .my-form textarea{
+    padding: 0.7em;
+    width: 90%;
+}
+
+.my-form textarea{
+    height: 6em;
+}
+
+.my-form .button{
+    background: var(--clr-ldark);
+    color: var(--clr-lgray);
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 3px;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-psmall);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.my-form .button:hover{
+    background: var(--clr-gray);
+    color: var(--clr-dark);
+}
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                        PAGE 4 : ORDER 
+---------------------------------------------------------------------------------------------------------*/
+
+.orderBackground{
+    background: url(../img/background_order.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.order{
+    text-align: center;
+    padding: 3em;
+    margin-bottom: 3.5em;
+}
+
+.order h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    padding-top: var(--p-fixedpad);
+    padding-bottom: 3em;
+}
+
+.order a{
+    background: var(--clr-ldark);
+    color: #fff;
+    padding: 0.7em 2em;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-psmall);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.order a:hover{
+    background: var(--clr-gray);
+    color: var(--clr-dark);
+}
+
+.orderImage{
+    padding: 0 2em 2.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto)); 
+}
+
+.orderImage img{
+    width: 100%;
+}
