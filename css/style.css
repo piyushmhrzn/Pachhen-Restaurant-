@@ -63,183 +63,6 @@ html,body{
     --p-content: 4.5em;
 }
 
-@media (min-width: 640px) and (max-width: 1000px){
-    :root{
-        --fs-h1: 4em;
-        --fs-h2: 1.8em;
-        --fs-h3: 1.3em;
-        --fs-p: 1em;
-        --fs-psmall: 0.9em;
-        --fs-a: 1em;
-        --fs-logo: 1.1em;
-
-        --p-headpad: 4em;
-        --p-onepara: 10em;
-        --p-fixedpad: 3.5em;
-        --p-padding: 0.8em;
-        --p-footpad: 3.5em;
-        --p-content: 4em;
-    }
-    
-    .navbar li {
-        margin-right: 1.3em;
-    }
-
-    section .threeParagraphs{
-        justify-content: flex-start;
-    }
-    
-    .threeParagraphs .paraOne, .threeParagraphs .paraTwo, .threeParagraphs .paraThree{
-        flex: 1 0 500px;
-    }
-}
-
-@media (min-width: 390px) and (max-width: 639px){
-    :root{
-        --fs-h1: 3em;
-        --fs-h2: 1.6em;
-        --fs-h3: 1.1em;
-        --fs-p: 0.9em;
-        --fs-psmall: 0.8em;
-        --fs-a: 0.8em;
-        --fs-logo: 1em;
-        
-        --p-headpad: 4.3em;
-        --p-onepara: 5em;
-        --p-fixedpad: 4.8em;
-        --p-padding: 0.6em;
-        --p-footpad: 2.5em;
-        --p-content: 3.5em;
-    }
-
-    .reservationBackground .headerImage h1{
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .navWrap .logo{
-        padding-left: 2.5em;
-    }
-
-    nav .hamburger-menu{
-        display: block;
-        position: fixed;
-        top: 5%;
-        right: 5%;
-        font-size: var(--fs-h3);
-        z-index: 2;
-    }
-
-    .navbar{
-        width: 40%;
-        height: 80%;
-        background-color: #262626;
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding-right: 0;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 30% 0 0 70%;
-        transition: all 0.5s;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .change{
-        opacity: 0.9;
-        visibility: visible;
-    }
-
-    .navbar .nav-item{
-        margin: 1em 1em 2em 3em;
-    }
-
-    section .threeParagraphs{
-        justify-content: flex-start;
-    }
-    
-    .threeParagraphs .paraOne, .threeParagraphs .paraTwo, .threeParagraphs .paraThree{
-        flex: 1 0 300px;
-    }
-   
-}
-
-@media (max-width: 389px){
-    :root{
-        --fs-h1: 2em;
-        --fs-h2: 1.4em;
-        --fs-h3: 0.9em;
-        --fs-p: 0.8em;
-        --fs-psmall: 0.7em;
-        --fs-a: 0.6em;
-        --fs-logo: 0.9em;
-
-        --p-headpad: 4.8em;
-        --p-onepara: 2.5em;
-        --p-fixedpad: 5.6em;   
-        --p-padding: 0.4em;
-        --p-footpad: 1.8em;
-        --p-content: 3em;
-    }
-
-    .reservationBackground .headerImage h1{
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .navWrap .logo{
-        padding-left: 2.5em;
-    }
-    
-    nav .hamburger-menu{
-        display: block;
-        position: fixed;
-        top: 5%;
-        right: 5%;
-        font-size: var(--fs-h3);
-        z-index: 2;
-    }
-
-    .navbar{
-        width: 40%;
-        height: 80%;
-        background-color: #262626;
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding-right: 0;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 30% 0 0 70%;
-        transition: all 0.5s;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .change{
-        opacity: 0.9;
-        visibility: visible;
-    }
-
-    .navbar .nav-item{
-        margin: 1em 0 2em 1.5em;
-    }
-
-    section .threeParagraphs{
-        justify-content: flex-start;
-    }
-    
-    .threeParagraphs .paraOne, .threeParagraphs .paraTwo, .threeParagraphs .paraThree{
-        flex: 1 0 200px;
-    }
-
-}
-
 /*--------------------------------------------------------------------------------------------------------- 
                                                 LOGO 
 ---------------------------------------------------------------------------------------------------------*/
@@ -268,10 +91,6 @@ header .logo{
 /*--------------------------------------------------------------------------------------------------------- 
                                                 NAVBAR 
 ---------------------------------------------------------------------------------------------------------*/
-
-.hamburger-menu{
-    display: none;
-}
 
 nav{
     float: right;
@@ -513,6 +332,7 @@ nav a:hover {
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
+    
 }
 
 .fixed_kitchen h1{
@@ -1013,4 +833,302 @@ footer .copyright{
 
 .orderImage img{
     width: 100%;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------- 
+                                        MEDIA QUERIES 
+---------------------------------------------------------------------------------------------------------*/
+@media (min-width: 640px) and (max-width: 1000px){
+    :root{
+        --fs-h1: 4em;
+        --fs-h2: 1.8em;
+        --fs-h3: 1.3em;
+        --fs-p: 1em;
+        --fs-psmall: 0.9em;
+        --fs-a: 1em;
+        --fs-logo: 1.1em;
+
+        --p-headpad: 4em;
+        --p-onepara: 10em;
+        --p-fixedpad: 3.5em;
+        --p-padding: 0.8em;
+        --p-footpad: 3.5em;
+        --p-content: 4em;
+    }
+    
+    .navbar li {
+        margin-right: 1.3em;
+    }
+
+    section .threeParagraphs{
+        justify-content: flex-start;
+    }
+    
+    .threeParagraphs .paraOne, .threeParagraphs .paraTwo, .threeParagraphs .paraThree{
+        flex: 1 0 500px;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 639px){
+    :root{
+        --fs-h1: 3em;
+        --fs-h2: 1.6em;
+        --fs-h3: 1.1em;
+        --fs-p: 0.9em;
+        --fs-psmall: 0.8em;
+        --fs-a: 0.8em;
+        --fs-logo: 1em;
+        
+        --p-headpad: 4.3em;
+        --p-onepara: 5em;
+        --p-fixedpad: 4.8em;
+        --p-padding: 0.6em;
+        --p-footpad: 2.5em;
+        --p-content: 3.5em;
+    }
+
+    .reservationBackground .headerImage h1{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navWrap .logo{
+        padding-left: 2.5em;
+    }
+
+    header .hamburger {
+        position: fixed;
+        cursor: pointer;
+        right: 3%;
+        top: 2em;
+        z-index: 200;
+        background: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    header .hamburger .line {
+        width: 15px;
+        height: 2px;
+        background: #000;
+        margin: 1px auto;
+        -webkit-transition: .2s;
+        transition: .2s;
+    }
+
+    header .hamburger .active1 {
+        -webkit-transform: translateY(4px) rotate(-45deg);
+                transform: translateY(4px) rotate(-45deg);
+    }
+
+    header .hamburger .active2 {
+        opacity: 0;
+    }
+
+    header .hamburger .active3 {
+        -webkit-transform: translateY(-4px) rotate(45deg);
+                transform: translateY(-4px) rotate(45deg);
+    }
+
+    header .burgerBG {
+        background: #757477;
+    }
+
+    header .nav-list{
+        position: fixed;
+        background: #3c342f;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+        -webkit-transition: -webkit-transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+        transition: -webkit-transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+        transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+        transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1), 
+                    -webkit-transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+        z-index: 100;
+    }
+
+    header .nav-list li {
+        padding-top: 50px;
+    }
+
+    header .nav-list li:first-child {
+        padding-top: 200px;
+    }
+
+    header .nav-list li a {
+        font-size: 0.9rem;
+    }
+
+    header .open {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    section .threeParagraphs{
+        justify-content: flex-start;
+    }
+    
+    .threeParagraphs .paraOne, .threeParagraphs .paraTwo, .threeParagraphs .paraThree{
+        flex: 1 0 300px;
+    }
+   
+}
+
+@media (max-width: 389px){
+    :root{
+        --fs-h1: 2em;
+        --fs-h2: 1.4em;
+        --fs-h3: 0.9em;
+        --fs-p: 0.8em;
+        --fs-psmall: 0.7em;
+        --fs-a: 0.6em;
+        --fs-logo: 0.9em;
+
+        --p-headpad: 4.8em;
+        --p-onepara: 2.5em;
+        --p-fixedpad: 5.6em;   
+        --p-padding: 0.4em;
+        --p-footpad: 1.8em;
+        --p-content: 3em;
+    }
+
+    .reservationBackground .headerImage h1{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navWrap .logo{
+        padding-left: 2.5em;
+    }
+
+    header .hamburger {
+        position: fixed;
+        cursor: pointer;
+        right: 3%;
+        top: 2em;
+        z-index: 200;
+        background: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    header .hamburger .line {
+        width: 15px;
+        height: 2px;
+        background: #000;
+        margin: 1px auto;
+        -webkit-transition: .2s;
+        transition: .2s;
+    }
+
+    header .hamburger .active1 {
+        -webkit-transform: translateY(4px) rotate(-45deg);
+                transform: translateY(4px) rotate(-45deg);
+    }
+
+    header .hamburger .active2 {
+        opacity: 0;
+    }
+
+    header .hamburger .active3 {
+        -webkit-transform: translateY(-4px) rotate(45deg);
+                transform: translateY(-4px) rotate(45deg);
+    }
+
+    header .burgerBG {
+        background: #757477;
+    }
+
+    header .nav-list{
+        position: fixed;
+        background: #3c342f;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100vh;
+        display: flex;
+        justify-content: center;
+        
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+        -webkit-transition: -webkit-transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+        transition: -webkit-transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+        transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+        transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1), 
+                    -webkit-transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+        z-index: 100;
+    }
+
+    header .nav-list li {
+        padding-top: 50px;
+    }
+
+    header .nav-list li:first-child {
+        padding-top: 0px;
+    }
+
+    header .nav-list li a {
+        font-size: 0.9rem;
+    }
+
+    header .open {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    section .threeParagraphs{
+        justify-content: flex-start;
+    }
+    
+    .threeParagraphs .paraOne, .threeParagraphs .paraTwo, .threeParagraphs .paraThree{
+        flex: 1 0 200px;
+    }
+
+    .reserveImage{
+        padding: 0 20px;
+        margin: 0 auto;
+    }
 }
